@@ -10,10 +10,11 @@ const projects = [
     github: "https://github.com/Praveshvermaa/SkillLink",
     live: "https://skill-link-five-ruby.vercel.app",
     points: [
-      "Built a full-stack marketplace with Next.js 16 and Supabase, enabling real-time geolocation-based service discovery via interactive Leaflet maps for 1000+ potential listings.",
-      "Implemented secure authentication (email verification, password reset, RBAC), eliminating unauthorized access.",
-      "Developed a real-time chat system using Supabase Realtime subscriptions with message persistence and read receipts, achieving sub-100ms message delivery.",
-      "Optimized map performance via debounced API requests and bounding-box queries, reducing server load by ~80% during high-frequency interactions."
+      "Engineered a full-stack location-based service marketplace, connecting users with local providers such as plumbing, electrical services, and tutoring",
+      "Implemented real-time chat via Supabase Realtime and RBAC auth, supporting 2+ user roles with near-zero message latency",
+      "Integrated Leaflet Maps with dynamic filtering across 100+ listings at <200ms response time",
+      "Architected full booking workflow with status tracking, earnings calendar, and ratings system — boosting estimated repeat engagement by 30%",
+      "Built responsive UI (Tailwind + ShadCN) and admin panel managing 100+ users & services in real time"
     ]
   },
   {
@@ -22,9 +23,10 @@ const projects = [
     github: "https://github.com/Praveshvermaa/Your-Post-Client",
     live: "https://your-post-client.vercel.app",
     points: [
-      "Engineered a secure MERN platform with protected REST APIs supporting full CRUD for posts and image uploads, reducing content workflow friction by ~60% vs manual processes.",
-      "Integrated NLP sentiment pipeline processing 100% of posts automatically, eliminating manual tagging and delivering AI-generated visuals per post.",
-      "Built analytics dashboards visualizing sentiment trends and engagement metrics, improving content decision speed by 3× with Cloudinary-optimized media delivery cutting load times by ~40%."
+      "Built full-stack social platform in React, Express & MongoDB handling 500+ cloud media assets via Multer & Cloudinary",
+      "Developed NLP sentiment analysis pipeline classifying 100+ comments/post with ~90% accuracy using real-time scoring",
+      "Integrated AI image generation (Puter.js) reducing user content creation time by ~60%",
+      "Delivered sentiment analytics dashboard surfacing trends across 100+ daily interactions with JWT-secured auth and profile engagement tracking "
     ]
   },
   {
@@ -33,10 +35,10 @@ const projects = [
     github: "https://github.com/Praveshvermaa/NotesHub-Client",
     live: "https://notes-hub-client-weld.vercel.app",
     points: [
-      "Developed a full-stack notes platform with JWT auth, email verification, and rating-based filtering, enabling sub-second search across 100+ academic documents.",
-      "Built Multer + Cloudinary upload pipelines handling files up to 50MB, reducing upload failure rate to <1% with reliable metadata tracking.",
-      "Created uploader dashboards tracking ratings, downloads, and engagement — with top notes achieving 4.8/5 avg rating and 200+ downloads in early access."
-    ]
+      "Built academic document platform in React, Express & MongoDB serving 200+ students and teachers across semesters and branches",
+      "Optimized indexed search across 100+ documents, cutting discovery time by ~50% (4s → 2s)",
+      "Handled secure file uploads in 10+ formats via Multer & Cloudinary with JWT-based auth",
+      "Maintained 4.8/5 average content rating via peer review system and contributor dashboard, reducing content management time by ~40%",]
   }
 ];
 

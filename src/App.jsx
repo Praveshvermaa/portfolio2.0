@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Achievements from './components/Achievements';
 import Footer from './components/Footer';
+import Chatbot from './components/Chatbot';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Achievements />
         </main>
         <Footer />
+        <Chatbot />
       </div>
     </div>
   );

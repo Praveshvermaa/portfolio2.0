@@ -16,7 +16,7 @@ const Achievements = () => {
         </div>
 
         <div className="max-w-4xl mx-auto flex flex-col gap-6">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -33,7 +33,7 @@ const Achievements = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -51,7 +51,7 @@ const Achievements = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -62,9 +62,9 @@ const Achievements = () => {
               <Star className="w-6 h-6 text-accent" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white mb-2">MP Board State Topper</h3>
+              <h3 className="text-xl font-bold text-white mb-2">MP Board State Ranker</h3>
               <p className="text-textMuted leading-relaxed">
-                Achieved 96.4% in Class XII (2022), standing as a state topper in the Madhya Pradesh Board examinations.
+                Achieved 96.4% in Class XII (2022), standing as a state Ranker under 10 in the Madhya Pradesh Board examinations.
               </p>
             </div>
           </motion.div>

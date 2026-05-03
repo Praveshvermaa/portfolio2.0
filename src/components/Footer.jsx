@@ -64,7 +64,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Pravesh Verma. All rights reserved.
           </p>
           <p className="text-textMuted text-sm flex items-center gap-2">
-            Built with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> and React.
+            Built with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> by Pravesh.
           </p>
         </div>
       </div>

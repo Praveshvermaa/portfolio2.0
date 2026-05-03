@@ -6,7 +6,7 @@ const skillCategories = [
   {
     title: "Languages",
     icon: <Code2 className="w-6 h-6 text-primary" />,
-    skills: ["Java", "Python", "C++", "JavaScript", "TypeScript", "SQL", "PHP", "HTML5", "CSS3"]
+    skills: ["Java", "Python", "JavaScript", "SQL", "TypeScript", "PHP", "HTML5", "CSS3"]
   },
   {
     title: "Frontend",
@@ -16,7 +16,7 @@ const skillCategories = [
   {
     title: "Backend",
     icon: <Database className="w-6 h-6 text-accent" />,
-    skills: ["Express.js", "Node.js", "Django", "FastAPI", "REST APIs", "MongoDB", "MySQL", "Supabase", "PostgreSQL"]
+    skills: ["Express.js", "Node.js", "FastAPI", "REST APIs", "PostgreSQL", "MySQL", "Supabase", "MongoDB"]
   },
   {
     title: "Tools & Platforms",
@@ -56,7 +56,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -64,7 +64,7 @@ const Skills = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start"
         >
           {skillCategories.map((category, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               variants={itemVariants}
               className="glass p-8 rounded-2xl h-fit hover:bg-white/10 transition-colors border-t border-white/5"
@@ -75,7 +75,7 @@ const Skills = () => {
               <h3 className="text-xl font-bold text-white mb-6 font-['Outfit']">{category.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, sIdx) => (
-                  <span 
+                  <span
                     key={sIdx}
                     className="px-3 py-1 bg-white/5 text-textMuted text-sm rounded-full border border-white/10 hover:border-primary/50 hover:text-white transition-colors cursor-default"
                   >
