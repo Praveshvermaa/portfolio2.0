@@ -29,8 +29,8 @@ const Chatbot = () => {
     setIsLoading(true);
 
     try {
-      // Assuming backend is running on localhost:8000
-      const response = await fetch(`http://127.0.0.1:8000/chat/?q=${encodeURIComponent(text)}`);
+      const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+      const response = await fetch(`${API_URL}/chat/?q=${encodeURIComponent(text)}`);
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
