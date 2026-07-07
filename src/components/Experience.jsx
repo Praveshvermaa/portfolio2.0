@@ -35,26 +35,26 @@ const Experience = () => {
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-1">Full Stack Developer Intern</h3>
-                  <div className="text-xl text-primary font-medium">Milko Business App</div>
+                  <div className="text-xl text-primary font-medium"> WonderKids</div>
                 </div>
                 <div className="flex flex-col md:items-end gap-2 text-textMuted text-sm">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>Jan 2025 – Mar 2025</span>
+                    <span>Apr 2026 -- Jun 2026</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4" />
-                    <span>On-Site</span>
+                    <span>Remote</span>
                   </div>
                 </div>
               </div>
 
               <ul className="space-y-3 mt-6">
                 {[
-                  "Built a production-ready MERN stack web application for a dairy management startup, enabling core business workflows from scratch.",
-                  "Developed a React-based responsive UI with reusable components, improving UI consistency and reducing development time.",
-                  "Designed and integrated RESTful Node.js/Express APIs with MongoDB for seamless data management and CRUD operations.",
-                  "Implemented backend business logic for data processing, authentication, and application state management."
+                  "Developed 5 production-ready educational math games for the WonderKids learning platform using React.js, Express.js, and MongoDB.",
+                  "Engineered complete full-stack functionality, including interactive game logic, RESTful APIs, and database integration.",
+                  "Created responsive, user-friendly interfaces with scoring, validation, and progress-tracking features.",
+                  "Collaborated with the team to fix bugs, improve performance, and enhance the user experience."
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-gray-300">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0"></div>
