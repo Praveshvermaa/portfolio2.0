@@ -18,6 +18,20 @@ const projects = [
     ]
   },
   {
+    title: "Portfolio Chatbot — AI-Powered Portfolio Assistant",
+    tech: ["Python", "FastAPI", "FAISS", "NVIDIA Embeddings", "LLM", "Docker"],
+    github: "https://github.com/Praveshvermaa/portfolio_backend",
+    live: "https://pravesh-portfolio1.vercel.app/",
+    points: [
+      "Built an AI-powered portfolio chatbot that lets users ask natural-language questions about my experience, skills, projects, and background",
+      "Developed a FastAPI backend with a streaming chat endpoint for real-time conversational responses",
+      "Implemented a retrieval-augmented generation (RAG) pipeline using section-wise chunking to preserve context and improve answer relevance",
+      "Stored embeddings in FAISS for fast similarity search, reducing retrieval time and improving scalability",
+      "Integrated LLM-based response generation to provide accurate, human-like answers based on portfolio content",
+      "Deployed the backend with Docker and cloud hosting for easy access and future expansion"
+    ]
+  },
+  {
     title: "VibeVerse — AI-Powered Social Post App",
     tech: ["React", "Express", "MongoDB", "JWT", "NLP", "Cloudinary"],
     github: "https://github.com/Praveshvermaa/Your-Post-Client",
@@ -39,6 +53,20 @@ const projects = [
       "Optimized indexed search across 100+ documents, cutting discovery time by ~50% (4s → 2s)",
       "Handled secure file uploads in 10+ formats via Multer & Cloudinary with JWT-based auth",
       "Maintained 4.8/5 average content rating via peer review system and contributor dashboard, reducing content management time by ~40%",]
+  },
+  {
+    "title": "AI Job Search & Recommendation Platform",
+    "tech": ["Python", "FastAPI", "React", "Vite", "PostgreSQL", "Qdrant", "Google Gemini API", "Docker"],
+    "github": "https://github.com/Praveshvermaa/AI-Job-Search-Application-Backend",
+    "live": "",
+    "points": [
+      "Built an AI-powered job search and recommendation platform that helps users upload resumes and discover relevant job opportunities using semantic search",
+      "Developed a FastAPI backend with secure authentication, resume processing, and personalized job recommendation APIs",
+      "Integrated Google Gemini AI for resume parsing, skill extraction, and contextual job matching",
+      "Implemented vector-based similarity search using Qdrant to improve recommendation relevance beyond basic keyword matching",
+      "Created a modern React frontend with Vite and Tailwind CSS for an interactive user experience",
+      "Designed the system with a modular architecture supporting future scaling, external API integrations, and AI-driven enhancements"
+    ]
   }
 ];
 
