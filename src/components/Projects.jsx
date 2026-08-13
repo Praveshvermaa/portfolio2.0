@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Folder } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
+// ALL projects are linked to their github repositories and live demos respectively
 
 const projects = [
   {
