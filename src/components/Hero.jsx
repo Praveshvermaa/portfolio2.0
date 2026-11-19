@@ -56,21 +56,24 @@ const Hero = () => {
               <div className="font-mono text-sm md:text-base text-gray-300">
                 <p><span className="text-pink-500">const</span> <span className="text-blue-400">developer</span> = {'{'}</p>
                 <p className="ml-4"><span className="text-green-400">name</span>: <span className="text-yellow-300">'Pravesh Verma'</span>,</p>
-                <p className="ml-4"><span className="text-green-400">role</span>: <span className="text-yellow-300">'AI-Focused Full Stack Developer'</span>,</p>
+                <p className="ml-4"><span className="text-green-400">role</span>: <span className="text-yellow-300">'Generative AI & Full Stack Developer'</span>,</p>
                 <p className="ml-4">
                   <span className="text-green-400">description</span>:
                   <span className="text-yellow-300">
-                    'Building scalable web applications and intelligent systems using modern JavaScript and Python stacks, with a focus on RAG pipelines and agentic AI'
+                    'Building intelligent fullstack applications powered by Generative AI, RAG pipelines, and agentic workflows. Experienced in developing scalable full-stack systems using, MERN stack, Nextjs, Python, and LangChain.'
                   </span>,
                 </p>
                 <p className="ml-4"><span className="text-green-400">location</span>: <span className="text-yellow-300">'Bhopal, India'</span>,</p>
                 <p className="ml-4"><span className="text-green-400">skills</span>: [
+                  <span className="text-yellow-300">'Python'</span>,
+                  <span className="text-yellow-300">'LangChain'</span>,
+                  <span className="text-yellow-300">'RAG'</span>,
+                  <span className="text-yellow-300">'Qdrant'</span>,
+                  <span className="text-yellow-300">'FastAPI'</span>,
                   <span className="text-yellow-300">'React'</span>,
                   <span className="text-yellow-300">'Next.js'</span>,
-                  <span className="text-yellow-300">'Express'</span>,
-                  <span className="text-yellow-300">'MongoDB'</span>,
-                  <span className="text-yellow-300">'Python'</span>,
-                  <span className="text-yellow-300">'FastAPI'</span>
+                  <span className="text-yellow-300">'Node.js'</span>,
+                  {/* <span className="text-yellow-300">'MongoDB'</span> */}
                   ],</p>
                 <p>{'};'}</p>
                 <p className="mt-2 text-textMuted">// Let's build something amazing together!</p>

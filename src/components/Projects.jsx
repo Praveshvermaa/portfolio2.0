@@ -5,6 +5,27 @@ import { FaGithub } from 'react-icons/fa';
 // ALL projects are linked to their github repositories and live demos respectively
 
 const projects = [
+
+  {
+    title: "AI Portfolio Assistant — Hybrid RAG Chatbot",
+    tech: [
+      "Python",
+      "FastAPI",
+      "LangChain",
+      "Qdrant",
+      "Hybrid Search",
+      "LLM APIs",
+    ],
+    github: "https://github.com/Praveshvermaa/portfolio_backend",
+    live: "https://pravesh-portfolio1.vercel.app/",
+    points: [
+      "Built an AI-powered portfolio assistant using RAG to answer natural-language queries about skills, projects, and experience.",
+      "Implemented hybrid retrieval using dense embeddings and sparse BM25 vectors with Qdrant.",
+      "Developed section-aware document parsing and configurable chunking to improve contextual retrieval.",
+      "Integrated LangChain, FastAPI, and LLM APIs to deliver context-grounded responses through real-time SSE streaming.",
+      "Configured 1,536-dimensional embeddings and modularized ingestion, retrieval, and generation pipelines."
+    ]
+  },
   {
     title: "SkillLink — Full-Stack Skill Marketplace",
     tech: ["Next.js", "TypeScript", "Supabase", "Leaflet"],
@@ -17,21 +38,8 @@ const projects = [
       "Architected full booking workflow with status tracking, earnings calendar, and ratings system — boosting estimated repeat engagement by 30%",
       "Built responsive UI (Tailwind + ShadCN) and admin panel managing 100+ users & services in real time"
     ]
-  },
-  {
-    title: "Portfolio Chatbot — AI-Powered Portfolio Assistant",
-    tech: ["Python", "FastAPI", "FAISS", "NVIDIA Embeddings", "LLM", "Docker"],
-    github: "https://github.com/Praveshvermaa/portfolio_backend",
-    live: "https://pravesh-portfolio1.vercel.app/",
-    points: [
-      "Built an AI-powered portfolio chatbot that lets users ask natural-language questions about my experience, skills, projects, and background",
-      "Developed a FastAPI backend with a streaming chat endpoint for real-time conversational responses",
-      "Implemented a retrieval-augmented generation (RAG) pipeline using section-wise chunking to preserve context and improve answer relevance",
-      "Stored embeddings in FAISS for fast similarity search, reducing retrieval time and improving scalability",
-      "Integrated LLM-based response generation to provide accurate, human-like answers based on portfolio content",
-      "Deployed the backend with Docker and cloud hosting for easy access and future expansion"
-    ]
-  },
+  }
+  ,
   {
     title: "VibeVerse — AI-Powered Social Post App",
     tech: ["React", "Express", "MongoDB", "JWT", "NLP", "Cloudinary"],
@@ -55,20 +63,6 @@ const projects = [
       "Handled secure file uploads in 10+ formats via Multer & Cloudinary with JWT-based auth",
       "Maintained 4.8/5 average content rating via peer review system and contributor dashboard, reducing content management time by ~40%",]
   },
-  {
-    "title": "AI Job Search & Recommendation Platform",
-    "tech": ["Python", "FastAPI", "React", "Vite", "PostgreSQL", "Qdrant", "Google Gemini API", "Docker"],
-    "github": "https://github.com/Praveshvermaa/AI-Job-Search-Application-Backend",
-    "live": "",
-    "points": [
-      "Built an AI-powered job search and recommendation platform that helps users upload resumes and discover relevant job opportunities using semantic search",
-      "Developed a FastAPI backend with secure authentication, resume processing, and personalized job recommendation APIs",
-      "Integrated Google Gemini AI for resume parsing, skill extraction, and contextual job matching",
-      "Implemented vector-based similarity search using Qdrant to improve recommendation relevance beyond basic keyword matching",
-      "Created a modern React frontend with Vite and Tailwind CSS for an interactive user experience",
-      "Designed the system with a modular architecture supporting future scaling, external API integrations, and AI-driven enhancements"
-    ]
-  }
 ];
 
 const Projects = () => {

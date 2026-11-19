@@ -1,29 +1,80 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Database, Layout, Wrench } from 'lucide-react';
+import { BrainCircuit, Code2, Layout, Database, Wrench } from "lucide-react";
+
 
 const skillCategories = [
   {
-    title: "Languages",
-    icon: <Code2 className="w-6 h-6 text-primary" />,
-    skills: ["Java", "Python", "JavaScript", "SQL", "TypeScript", "PHP", "HTML5", "CSS3"]
+    title: "Generative AI & RAG",
+    icon: <BrainCircuit className="w-6 h-6 text-primary" />,
+    skills: [
+      "Generative AI",
+      "LangChain",
+      "RAG",
+      "Hybrid Search",
+      "Vector Databases",
+      "Qdrant",
+      "Embeddings",
+      "Prompt Engineering"
+    ]
   },
   {
-    title: "Frontend",
-    icon: <Layout className="w-6 h-6 text-secondary" />,
-    skills: ["React", "Next.js", "Context API", "Redux", "jQuery", "Tailwind CSS", "Bootstrap", "ShadCN"]
+    title: "Programming Languages",
+    icon: <Code2 className="w-6 h-6 text-secondary" />,
+    skills: [
+      "Java",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "PHP",
+      "HTML5",
+      "CSS3"
+    ]
   },
   {
-    title: "Backend",
-    icon: <Database className="w-6 h-6 text-accent" />,
-    skills: ["Express.js", "Node.js", "FastAPI", "REST APIs", "PostgreSQL", "MySQL", "Supabase", "MongoDB"]
+    title: "Frontend Development",
+    icon: <Layout className="w-6 h-6 text-accent" />,
+    skills: [
+      "React",
+      "Next.js",
+      "Redux",
+      "Context API",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Shadcn UI",
+      "jQuery"
+    ]
+  },
+  {
+    title: "Backend & Databases",
+    icon: <Database className="w-6 h-6 text-green-400" />,
+    skills: [
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "REST APIs",
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "Supabase"
+    ]
   },
   {
     title: "Tools & Platforms",
-    icon: <Wrench className="w-6 h-6 text-green-400" />,
-    skills: ["Git", "GitHub", "AWS Cloud", "Vercel", "Postman", "Cloudinary", "Cursor IDE"]
+    icon: <Wrench className="w-6 h-6 text-orange-400" />,
+    skills: [
+      "Git",
+      "GitHub",
+      "AWS",
+      "Vercel",
+      "Postman",
+      "Cloudinary",
+      "Cursor"
+    ]
   }
 ];
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
