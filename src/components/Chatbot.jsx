@@ -25,41 +25,107 @@ const Chatbot = () => {
   const sendMessage = async (text) => {
     if (!text.trim() || isLoading) return;
 
-    setMessages(prev => [...prev, { id: Date.now().toString(), role: 'user', content: text }]);
+    setMessages((prev) => [
+      ...prev,
+      { id: Date.now().toString(), role: "user", content: text },
+    ]);
+
     setIsLoading(true);
 
+    const msgId = (Date.now() + 1).toString();
+
+    // Create an empty assistant message first.
+    setMessages((prev) => [
+      ...prev,
+      { id: msgId, role: "assistant", content: "" },
+    ]);
+
     try {
-      const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
-      const response = await fetch(`${API_URL}/chat/?q=${encodeURIComponent(text)}`);
+      const API_URL =
+        import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
+      const response = await fetch(`${API_URL}/stream`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query: text }),
+      });
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        const errorDetails = await response.text();
+        throw new Error(
+          `HTTP ${response.status}: ${errorDetails}`
+        );
+      }
+
+      if (!response.body) {
+        throw new Error("Streaming response body is unavailable.");
       }
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
-      let answer = '';
 
-      setIsLoading(false);
-      const msgId = (Date.now() + 1).toString();
-      setMessages(prev => [...prev, { id: msgId, role: 'assistant', content: '' }]);
+      let answer = "";
+      let buffer = "";
 
       while (true) {
         const { done, value } = await reader.read();
-        if (done) break;
 
-        answer += decoder.decode(value, { stream: true });
-        setMessages(prev => prev.map(msg =>
-          msg.id === msgId ? { ...msg, content: answer } : msg
-        ));
+        if (done) {
+          buffer += decoder.decode();
+          break;
+        }
+
+        buffer += decoder.decode(value, { stream: true });
+
+        const events = buffer.split("\n\n");
+        buffer = events.pop() || "";
+
+        for (const event of events) {
+          const dataLine = event
+            .split("\n")
+            .find((line) => line.startsWith("data:"));
+
+          if (!dataLine) continue;
+
+          const data = dataLine.slice(5).trim();
+
+          if (data === "[DONE]") continue;
+
+          const parsed = JSON.parse(data);
+
+          if (parsed.error) {
+            throw new Error(parsed.error);
+          }
+
+          if (parsed.token) {
+            answer += parsed.token;
+
+            setMessages((prev) =>
+              prev.map((msg) =>
+                msg.id === msgId
+                  ? { ...msg, content: answer }
+                  : msg
+              )
+            );
+          }
+        }
       }
     } catch (error) {
-      console.error('Error fetching chat response:', error);
-      setMessages(prev => [...prev, {
-        id: (Date.now() + 1).toString(),
-        role: 'assistant',
-        content: "Oops! I'm having trouble connecting to the server right now. Is the backend running on port 8000?"
-      }]);
+      console.error("Error fetching chat response:", error);
+
+      setMessages((prev) =>
+        prev.map((msg) =>
+          msg.id === msgId
+            ? {
+              ...msg,
+              content:
+                "Sorry, I couldn't connect to the chatbot server. Please try again.",
+            }
+            : msg
+        )
+      );
     } finally {
       setIsLoading(false);
     }
