@@ -91,7 +91,7 @@ const Hero = () => {
               View My Work
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="https://drive.google.com/file/d/1TjxOzvqEFxHxz_T1m94nFTFCNVj3SD7E/view?usp=sharing" className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-medium transition-all flex items-center justify-center gap-2 group">
+            <a href="https://drive.google.com/file/d/1RJpIzQykjUfVUnAuNklV4SirdX6uyuXy/view?usp=sharing" className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-medium transition-all flex items-center justify-center gap-2 group">
               <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
               Download Resume
             </a>
